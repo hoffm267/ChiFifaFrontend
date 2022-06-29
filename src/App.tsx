@@ -1,13 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SideBar from './components/SideBar';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div>
-      <SideBar />
-      <div className=" flex items-center justify-center mt-16 h-screen  bg-gray "/>
+      <NavBar />
+      <div className=" flex h-screen  bg-gray">
+        {/*
+        <div className="fixed top-16 left-0  w-32 h-screen border-r border-dotted border-gray shadow-xl">
+          
+        </div>
+        */}
+        
+      </div>
 
       
 
