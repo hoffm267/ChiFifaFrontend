@@ -8,9 +8,14 @@ module.exports = {
 			red: "#F05D5E",
 			dollarBill: "#97B85D",
 			oliveDrab: "#668925",
-			gray: "#2B373B",
+			jet: "#353131",
 			purple: "#776871",
 			snow: "#fffafa",
+			isabelline: "#F5F1ED",
+			bone: "#DAD2BC",
+			grullo: "#A99870",
+			blackCoral: "#59656F"
+			
 		},
 		extend: {
 			keyframes: {

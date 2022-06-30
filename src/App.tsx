@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import Home from "./views";
 
 import {
   BrowserRouter,
@@ -14,7 +14,7 @@ function App() {
         <BrowserRouter>
             <NavBar />
             <Routes>
-                <Route path="/" element={<Default />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/add" element={<Test />} />
                 <Route path="/records" element={<Test2 />} />
             </Routes>
@@ -22,31 +22,23 @@ function App() {
     );
 }
 
-const Default = () => (
-    <div className=" flex h-screen  bg-gray">
-        {/*
-        <div className="fixed top-16 left-0  w-32 h-screen border-r border-dotted border-gray shadow-xl">
-          
-        </div>
-        */}
-    </div>
-);
+
 const Test = () => (
-    <div className=" flex h-screen  bg-dollarBill">
-        {/*
-        <div className="fixed top-16 left-0  w-32 h-screen border-r border-dotted border-gray shadow-xl">
-          
-        </div>
-        */}
-    </div>
+    <div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-dollarBill  ">
+			<div className="flex py-10 px-10 h-full w-full rounded-2xl bg-bone justify-center items-center">
+				<div className=" h-full w-full py-20 px-20 bg-jet rounded-2xl ">
+					<div className="h-full w-full rounded-2xl bg-blackCoral"></div>
+				</div>
+			</div>
+		</div>
 );
 const Test2 = () => (
-    <div className=" flex h-screen  bg-red">
-        {/*
-        <div className="fixed top-16 left-0  w-32 h-screen border-r border-dotted border-gray shadow-xl">
-          
+    <div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-red  ">
+    <div className="flex py-10 px-10 h-full w-full rounded-2xl bg-bone justify-center items-center">
+        <div className=" h-full w-full py-20 px-20 rounded-2xl bg-jet ">
+            <div className="h-1/3 w-1/3 rounded-2xl bg-blackCoral"></div>
         </div>
-        */}
     </div>
+</div>
 );
 export default App;

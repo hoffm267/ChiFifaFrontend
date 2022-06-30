@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import NavBarBall from "../NavBarIcons/NavBarBall";
 import NavBarBook from "../NavBarIcons/NavBarBook";
 import { NavBarSelect } from "../../interfaces/NavBarSelect";
@@ -16,12 +15,12 @@ const NavBar = () => {
 	});
 
 	React.useEffect(() => {
-		if (location.pathname === "/add") {
-			setSelectedIcon({ ...selectedIcon, Ball: true, Logo: false });
-		} else if (location.pathname === "/records") {
-			setSelectedIcon({ ...selectedIcon, Book: true, Logo: false });
+		if (location.pathname.includes("/add")) {
+			setSelectedIcon({Ball: true, Logo: false, Book: false} );
+		} else if (location.pathname.includes("/records")) {
+			setSelectedIcon({Ball: false, Logo: false, Book: true});
 		}
-	}, []);
+	}, [location.pathname]);
 
 	const handleSelected = (e: React.MouseEvent<HTMLElement>) => {
 		const temp: NavBarSelect = { Ball: false, Logo: false, Book: false };
@@ -29,7 +28,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<div className="fixed flex flex-row h-16 w-screen bg-gray shadow-xl ">
+		<div className="fixed flex flex-row h-16 w-screen bg-jet shadow-xl ">
 			<NavBarBall
 				selected={selectedIcon.Ball}
 				handleSelected={handleSelected}
