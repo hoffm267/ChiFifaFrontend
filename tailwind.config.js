@@ -31,6 +31,11 @@ module.exports = {
 			animation: {
 				wiggle: "wiggle 1s ease-in-out infinite",
 			},
+			spacing: {
+				
+					'1/12': "8.333%",
+				
+			}
 		},
 	},
 	plugins: [],

@@ -28,7 +28,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<div className="fixed flex flex-row h-16 w-screen bg-jet shadow-xl ">
+		<div className="fixed flex flex-row h-16 w-screen bg-jet shadow-2xl ">
 			<NavBarBall
 				selected={selectedIcon.Ball}
 				handleSelected={handleSelected}

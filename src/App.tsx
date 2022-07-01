@@ -11,14 +11,18 @@ import {
 
 function App() {
     return (
+        
         <BrowserRouter>
+            
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/add" element={<Test />} />
                 <Route path="/records" element={<Test2 />} />
             </Routes>
+            
         </BrowserRouter>
+       
     );
 }
 

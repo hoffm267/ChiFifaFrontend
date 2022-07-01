@@ -1,24 +1,26 @@
 import React from "react";
+import WinsLeaderboard from "../components/WinsLeaderboard";
+import StreakLeaderboard from "../components/StreakLeaderboard";
+import PercentageLeaderboard from "../components/PercentageLeaderboard";
+import RecentMatchesLeaderboard from "../components/RecentMatchesLeaderboard";
 
 const Home = () => {
 	return (
-		<div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-jet shadow-lg  ">
-			<div className="flex py-10 px-10 h-full w-full rounded-2xl md:bg-bone justify-center items-center shadow-lg sm:bg-dollarBill">
-				<div className="flex flex-row justify-center h-full w-full rounded-xl  px-10 py-5 bg-blackCoral shadow-lg">
-					<div className="flex h-full mx-5 w-full shadow-2xl bg-bone rounded-lg items-center justify-center text-center text-jet font-bold text-lg italic">
-						
-					</div>
-					<div className="flex h-full mx-5 w-full shadow-2xl bg-bone rounded-lg items-center justify-center text-center text-jet font-bold text-lg italic">
-						
-					</div>
-					<div className="flex h-full mx-5 w-full shadow-2xl bg-bone rounded-lg items-center justify-center text-center text-jet font-bold text-lg italic">
-						
-					</div>
-					<div className="flex h-full mx-5 w-full shadow-2xl bg-bone rounded-lg items-center justify-center text-center text-jet font-bold text-lg italic">
-						
-					</div>
+		<div className="pt-20 pb-5 px-10   ">
+			
+			<div className="flex sm:flex-col lg:flex-row justify-center h-full w-full py-5">
 				
-				</div>
+				<WinsLeaderboard />
+				
+				<PercentageLeaderboard />
+				<StreakLeaderboard />
+				<RecentMatchesLeaderboard />
+					
+					
+				
+				
+				
+				
 			</div>
 		</div>
 	);
