@@ -14,7 +14,8 @@ module.exports = {
 			isabelline: "#F5F1ED",
 			bone: "#DAD2BC",
 			grullo: "#A99870",
-			blackCoral: "#59656F"
+			blackCoral: "#59656F",
+			gray: "#D3D3D3"
 			
 		},
 		extend: {

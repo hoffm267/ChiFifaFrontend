@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./views";
+import Game from "./views/Game";
 
 import {
   BrowserRouter,
@@ -17,7 +18,7 @@ function App() {
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/add" element={<Test />} />
+                <Route path="/add" element={<Game />} />
                 <Route path="/records" element={<Test2 />} />
             </Routes>
             
@@ -26,16 +27,6 @@ function App() {
     );
 }
 
-
-const Test = () => (
-    <div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-dollarBill  ">
-			<div className="flex py-10 px-10 h-full w-full rounded-2xl bg-bone justify-center items-center">
-				<div className=" h-full w-full py-20 px-20 bg-jet rounded-2xl ">
-					<div className="h-full w-full rounded-2xl bg-blackCoral"></div>
-				</div>
-			</div>
-		</div>
-);
 const Test2 = () => (
     <div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-red  ">
     <div className="flex py-10 px-10 h-full w-full rounded-2xl bg-bone justify-center items-center">
