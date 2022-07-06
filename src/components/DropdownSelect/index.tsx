@@ -17,7 +17,7 @@ const DropDownSelect = (props: IProps) => {
 				<button
 					onClick={() => setShowOptions(!showOptions)}
 					type="button"
-					className="inline-flex justify-center w-full rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet   focus:ring-2 focus:ring-dollarBill  "
+					className="inline-flex items-center justify-center lg:w-48 sm:h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet   focus:ring-2 focus:ring-dollarBill  "
 					id="menu-button"
 				>
 					{selectOption}
@@ -39,7 +39,7 @@ const DropDownSelect = (props: IProps) => {
 			<div
 				className={`${
 					showOptions ? "visible" : "invisible"
-				}  divide-jet shadow-lg bg-snow ring-1 ring-black ring-opacity-5 rounded-sm focus:outline-none `}
+				}  divide-jet shadow-lg bg-snow ring-1 ring-black ring-opacity-5 rounded-sm focus:outline-none overflow-clip `}
 			>
 				<div className="divide-y divide-gray  ">
 					{options && options.map((o) => (

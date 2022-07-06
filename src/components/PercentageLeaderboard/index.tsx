@@ -17,7 +17,7 @@ const PercentageLeaderboard = () => {
 	}, [])
 	
 	return (
-		<div className="flex flex-col  w-full mx-5  border-jet rounded-lg   shadow-lg sm:mb-4 lg:mb-0  ">
+		<div className="flex flex-col h-full w-full mx-5  border-jet rounded-lg   shadow-lg sm:mb-4 lg:mb-0  ">
 			<div className="flex bg-jet justify-center items-center border-b-2 rounded-md border-jet h-12 w-full font-black text-snow font-mono text-4xl shadow-md">
 				<p>Win Percentage</p>
 			</div>

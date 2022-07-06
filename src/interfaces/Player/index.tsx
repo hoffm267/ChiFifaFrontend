@@ -1,5 +1,6 @@
 export interface Player {
-    "name": string,
-    "wins": number,
-    "loses": number,
+    name: string,
+    wins: number,
+    loses: number,
+    streak: number
 }

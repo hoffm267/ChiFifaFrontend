@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Home from "./views";
+import Home from "./views/Home";
 import Game from "./views/Game";
 
 import {
