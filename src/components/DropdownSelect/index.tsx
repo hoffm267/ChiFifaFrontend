@@ -16,7 +16,7 @@ const DropDownSelect = (props: IProps) => {
 			<div>
 				<button
 					onClick={() => setShowOptions(!showOptions)}
-					type="button"
+					
 					className="inline-flex items-center justify-center lg:w-48 sm:h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet   focus:ring-2 focus:ring-dollarBill  "
 					id="menu-button"
 				>
