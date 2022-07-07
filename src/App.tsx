@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./views/Home";
-
 import GamePage from "./views/GamePage";
 
 import {

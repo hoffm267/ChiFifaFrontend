@@ -28,7 +28,7 @@ const RecentMatchesLeaderboard = () => {
 				<p>Recent Matches</p>
 			</div>
 			<div className="flex flex-col items-center w-full pt-10  text-2xl ">
-				{games && games.slice(0,5).map((game) => (
+				{games && games.slice().reverse().slice(0, 5).map((game) => (
 					
 					<p className="pb-20  ">{game.player1 + " (" + game.team1 + ")" + " - " + game.player1Score + " vs " + game.player2 + " (" + game.team2 + ")" + " - " + game.player2Score}</p>
 					

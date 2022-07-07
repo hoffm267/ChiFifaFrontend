@@ -35,10 +35,8 @@ const GamePage = () => {
 					
 				},
 				body: JSON.stringify(Game),
-			}).then(async (response) => {
-				const json = await response.json();
-				console.log(json);
-			});
+			})
+			
 		} catch (err) {
 			console.log(err);
 		}
