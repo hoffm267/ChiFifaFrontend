@@ -4,8 +4,6 @@ export interface Game {
     player1Score: number,
     player2: string,
     team2: string,
-    player2Score: number,
-    gameId?: number,
-    date?: string
+    player2Score: number
 
 }

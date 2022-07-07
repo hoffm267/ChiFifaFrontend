@@ -2,7 +2,8 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./views/Home";
-import Game from "./views/Game";
+
+import GamePage from "./views/GamePage";
 
 import {
   BrowserRouter,
@@ -18,7 +19,7 @@ function App() {
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/add" element={<Game />} />
+                <Route path="/add" element={<GamePage />} />
                 <Route path="/records" element={<Test2 />} />
             </Routes>
             
