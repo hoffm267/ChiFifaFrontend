@@ -5,7 +5,10 @@ import { Player } from "../../../interfaces/Player";
 const WinsLeaderboard = () => {
 	const [players] = useFetch<Player[]>("https://localhost:7256/Players");
 
+
 	const [showAll, setShowAll] = React.useState<boolean>(false);
+
+	
 
 	const handleExpand = () => {
 		setShowAll(!showAll);

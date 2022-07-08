@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Game } from "../interfaces/Game";
 import { Player } from "../interfaces/Player";
 
-function useFetch<T>(url: string)  {
+const useFetch = <T>(url: string) => {
   const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {
