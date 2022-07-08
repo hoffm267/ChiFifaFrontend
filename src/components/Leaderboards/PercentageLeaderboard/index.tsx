@@ -1,20 +1,10 @@
 import React from "react";
-import { Player } from "../../interfaces/Player";
+import useFetch from "../../../Hooks/useFetch";
+import { Player } from "../../../interfaces/Player";
 
 const PercentageLeaderboard = () => {
-	const [players, setPlayers] = React.useState<Player[]>();
-
-	React.useEffect(() => {
-		(async () => {
-			try {
-				await fetch("https://localhost:7256/Players/percent").then(response => response.json()).then((data)=>setPlayers(data))
-			
-			}
-			 catch (err) {
-			console.log(err);
-			}
-		})(); 
-	}, [])
+	
+	const [players] = useFetch<Player[]>("https://localhost:7256/Players/percent");
 	
 	return (
 		<div className="flex flex-col h-full w-full mx-5  border-jet rounded-lg   shadow-lg sm:mb-4 lg:mb-0  ">

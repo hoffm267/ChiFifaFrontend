@@ -1,8 +1,8 @@
 import React from "react";
-import WinsLeaderboard from "../../components/WinsLeaderboard";
-import StreakLeaderboard from "../../components/StreakLeaderboard";
-import PercentageLeaderboard from "../../components/PercentageLeaderboard";
-import RecentMatchesLeaderboard from "../../components/RecentMatchesLeaderboard";
+import WinsLeaderboard from "../../components/Leaderboards/WinsLeaderboard";
+import StreakLeaderboard from "../../components/Leaderboards/StreakLeaderboard";
+import PercentageLeaderboard from "../../components/Leaderboards/PercentageLeaderboard";
+import RecentMatchesLeaderboard from "../../components/Leaderboards/RecentMatchesLeaderboard";
 
 const Home = () => {
 	return (

@@ -1,8 +1,9 @@
 import React from "react";
-import { Player } from "../../interfaces/Player";
+import useFetch from "../../../Hooks/useFetch";
+import { Player } from "../../../interfaces/Player";
 
 const WinsLeaderboard = () => {
-	const [players, setPlayers] = React.useState<Player[]>();
+	const [players] = useFetch<Player[]>("https://localhost:7256/Players");
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
 
@@ -10,17 +11,6 @@ const WinsLeaderboard = () => {
 		setShowAll(!showAll);
 	}
 
-	React.useEffect(() => {
-		(async () => {
-			try {
-				await fetch("https://localhost:7256/Players").then(response => response.json()).then((data)=>setPlayers(data))
-			
-			}
-			 catch (err) {
-			console.log(err);
-			}
-		})(); 
-	}, [])
 	
 	return (
 		<div className="flex flex-col h-full  w-full mx-5  border-jet rounded-lg  sm:mb-4 lg:mb-0  shadow-lg ">

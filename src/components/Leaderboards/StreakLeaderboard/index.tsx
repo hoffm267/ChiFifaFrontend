@@ -1,8 +1,9 @@
 import React from "react";
-import { Player } from "../../interfaces/Player";
+import useFetch from "../../../Hooks/useFetch";
+import { Player } from "../../../interfaces/Player";
 
 const StreakLeaderboard = () => {
-	const [players, setPlayers] = React.useState<Player[]>();
+	const [players] = useFetch<Player[]>("https://localhost:7256/Players/streak");
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
 
@@ -10,17 +11,6 @@ const StreakLeaderboard = () => {
 		setShowAll(!showAll);
 	}
 
-	React.useEffect(() => {
-		(async () => {
-			try {
-				await fetch("https://localhost:7256/Players/streak").then(response => response.json()).then((data)=>setPlayers(data))
-			
-			}
-			 catch (err) {
-			console.log(err);
-			}
-		})(); 
-	}, [])
 	return (
 		<div className="flex flex-col h-full w-full mx-5  border-jet rounded-lg   shadow-lg sm:mb-4 lg:mb-0 ">
 			<div className="flex bg-jet justify-center items-center border-b-2 rounded-md border-jet h-12 w-full font-black text-snow font-mono text-4xl shadow-md">
