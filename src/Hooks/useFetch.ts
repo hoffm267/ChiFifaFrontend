@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Game } from "../interfaces/Game";
 import { Player } from "../interfaces/Player";
 
+
 function useFetch<T>(url: string) {
 	const [data, setData] = useState<T[] | null>();
 	const [connection, setConnection] = useState<HubConnection>();
@@ -37,10 +38,9 @@ function useFetch<T>(url: string) {
 					console.log("Connected!");
 
 					connection.on("ReceiveGame", (message) => {
-            console.log("HERE");
 						fetch(url)
 							.then((res) => res.json())
-							.then((data) =>{console.log(data); setData(data)});
+							.then((data) =>{setData(data)});
 					});
 				})
 				.catch((e) => console.log("Connection failed: ", e));
