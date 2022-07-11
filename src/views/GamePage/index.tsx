@@ -5,8 +5,6 @@ import OptionsSelect from "../../components/OptionsSelect";
 import { Game } from "../../interfaces/Game";
 
 const url = process.env.REACT_APP_GAME_URL;
-console.log(url);
-
 
 const GamePage = () => {
 	const [player1, setPlayer1] = React.useState<string>("Pick Player 1");
@@ -47,30 +45,6 @@ const GamePage = () => {
 	};
 
 	const convertToJson = async (res: Response) => await res.json()
-
-	const dotThen = () => {
-		fetch("apiurl")
-			.then(convertToJson)
-			.then(console.log)
-			.catch(console.error)
-			.finally(() => console.log("done"));
-	};
-
-
-	
-	const asyncAwait = async () => {
-		try {
-			const response = await fetch("apiurl")
-			const json = await response.json()
-			console.log(json)
-		} catch (error) {
-			console.error(error)
-			
-		} finally {
-			console.log("done")
-		}
-
-	}
 	
 
 	return (
