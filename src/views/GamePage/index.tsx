@@ -23,7 +23,7 @@ const GamePage = () => {
 			team2: team2,
 			player2Score: score2,
 		};
-		console.log("HERE " + JSON.stringify(Game));
+		
 
 		try {
 			await fetch("https://localhost:7256/Game", {

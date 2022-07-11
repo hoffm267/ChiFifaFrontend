@@ -4,7 +4,8 @@ import { Player } from "../../../interfaces/Player";
 
 const PercentageLeaderboard = () => {
 	
-	const [players] = useFetch<Player[]>("https://localhost:7256/Players/percent");
+	
+	const [players] = useFetch<Player>("https://localhost:7256/Players/percent");
 	
 	return (
 		<div className="flex flex-col h-full w-full mx-5  border-jet rounded-lg   shadow-lg sm:mb-4 lg:mb-0  ">

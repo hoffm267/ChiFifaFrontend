@@ -1,9 +1,12 @@
+import { HubConnection } from "@microsoft/signalr";
 import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
 
 const WinsLeaderboard = () => {
-	const [players] = useFetch<Player[]>("https://localhost:7256/Players");
+	
+	
+	const [players] = useFetch<Player>("https://localhost:7256/Players");
 
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);

@@ -4,7 +4,8 @@ import { Game } from "../../../interfaces/Game";
 
 const RecentMatchesLeaderboard = () => {
 
-	const [games] = useFetch<Game[]>("https://localhost:7256/Game");
+	const [games] = useFetch<Game>("https://localhost:7256/Game");
+	
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
 

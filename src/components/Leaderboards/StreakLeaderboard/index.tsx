@@ -3,7 +3,8 @@ import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
 
 const StreakLeaderboard = () => {
-	const [players] = useFetch<Player[]>("https://localhost:7256/Players/streak");
+	const [players] = useFetch<Player>("https://localhost:7256/Players/streak");
+	
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
 
