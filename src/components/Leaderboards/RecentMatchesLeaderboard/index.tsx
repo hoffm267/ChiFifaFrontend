@@ -2,9 +2,11 @@ import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Game } from "../../../interfaces/Game";
 
+const url = process.env.REACT_APP_GAME_URL;
+
 const RecentMatchesLeaderboard = () => {
 
-	const [games] = useFetch<Game>("https://localhost:7256/Game");
+	const [games] = useFetch<Game>(url);
 	
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
@@ -32,7 +34,7 @@ const RecentMatchesLeaderboard = () => {
 						.slice(0, 5)
 						.map((game: Game) => (
 							
-							<p className="pb-20  ">
+							<p key={game.player1 + Math.random()} className="pb-20  ">
 								{game.player1 +
 									" (" +
 									game.team1 +

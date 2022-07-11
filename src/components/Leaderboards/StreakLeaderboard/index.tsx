@@ -2,8 +2,10 @@ import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
 
+const url = process.env.REACT_APP_PLAYERS_STREAK_URL;
+
 const StreakLeaderboard = () => {
-	const [players] = useFetch<Player>("https://localhost:7256/Players/streak");
+	const [players] = useFetch<Player>(url);
 	
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
@@ -19,7 +21,7 @@ const StreakLeaderboard = () => {
 			</div>
 			<div className="flex flex-col items-center w-full pt-10  text-2xl">
 				{players && players.slice(0,5).map((player) => (
-					<div className={`${player.streak > 0 ? "text-dollarBill" : "text-red"}`}>
+					<div key={player.name + Math.random()} className={`${player.streak > 0 ? "text-dollarBill" : "text-red"}`}>
 					<p className="pb-20  ">{player.name + " - " + player.streak}</p>
 					</div>
 				))}

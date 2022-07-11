@@ -3,10 +3,12 @@ import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
 
+const url = process.env.REACT_APP_PLAYERS_URL;
+
 const WinsLeaderboard = () => {
 	
 	
-	const [players] = useFetch<Player>("https://localhost:7256/Players");
+	const [players] = useFetch<Player>(url);
 
 
 	const [showAll, setShowAll] = React.useState<boolean>(false);
@@ -25,10 +27,10 @@ const WinsLeaderboard = () => {
 			</div>
 			<div onClick={handleExpand} className="flex flex-col items-center w-full pt-10  text-2xl">
 				{players && !showAll && players.slice(0,5).map((player) => (
-					<p className="pb-20  ">{player.name + " - " + player.wins + " Wins"}</p>
+					<p key={player.name + Math.random()} className="pb-20  ">{player.name + " - " + player.wins + " Wins"}</p>
 				))}
 				{players && showAll && players.slice(0,10).map((player) => (
-					<p className="pb-20  ">{player.name + " - " + player.wins + " Wins"}</p>
+					<p key={player.name + Math.random()} className="pb-20  ">{player.name + " - " + player.wins + " Wins"}</p>
 				))}
 				{!players && <p className="pb-20  ">Loading...</p>}
 				

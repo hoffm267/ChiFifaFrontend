@@ -4,6 +4,10 @@ import SubmitButton from "../../components/SubmitButton";
 import OptionsSelect from "../../components/OptionsSelect";
 import { Game } from "../../interfaces/Game";
 
+const url = process.env.REACT_APP_GAME_URL;
+console.log(url);
+
+
 const GamePage = () => {
 	const [player1, setPlayer1] = React.useState<string>("Pick Player 1");
 	const [player2, setPlayer2] = React.useState<string>("Pick Player 2");
@@ -26,7 +30,7 @@ const GamePage = () => {
 		
 
 		try {
-			await fetch("https://localhost:7256/Game", {
+			await fetch(url, {
 				method: "POST",
 				headers: {
 					 // this will allow all CORS requests
