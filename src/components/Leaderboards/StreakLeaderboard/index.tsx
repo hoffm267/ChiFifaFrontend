@@ -15,24 +15,20 @@ const StreakLeaderboard = () => {
 
 	return (
 		<div className="flex flex-col h-full w-full mx-5 sm:mb-4 lg:mb-0 ">
-			<div className="flex bg-dollarBill justify-center items-center rounded-t-2xl h-12 w-full font-black text-snow font-mono text-4xl ">
+			<div className="flex bg-dollarBill justify-center items-center rounded-t-2xl h-12 w-full font-bold text-snow text-3xl ">
 				<p>Win/Loss Streak</p>
 			</div>
-			<div className="flex flex-col items-center w-full pt-10 h-full bg-gray rounded-b-2xl text-2xl">
+			<div className="flex flex-col items-center w-full pt-10 h-full bg-gray rounded-b-2xl ">
 				{players &&
 					players.slice(0, 5).map((player) => (
-						<div
-							key={player.name + Math.random()}
-							className={`${
+						
+							<p  key={player.name + Math.random()} className={`${
 								player.streak > 0
 									? "text-dollarBill"
 									: "text-red"
-							}`}
-						>
-							<p className="pb-20  ">
+							} h-full text-xl font-bold`}  >
 								{player.name + " - " + player.streak}
 							</p>
-						</div>
 					))}
 				{!players && <p className="pb-20  ">Loading...</p>}
 			</div>

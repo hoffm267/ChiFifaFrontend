@@ -11,12 +11,12 @@ const PercentageLeaderboard = () => {
 	
 	return (
 		<div className="flex flex-col h-full w-full mx-5 sm:mb-4 lg:mb-0  ">
-			<div className="flex bg-red justify-center items-center  rounded-t-2xl h-12 w-full font-black text-snow font-mono text-4xl shadow-md">
+			<div className="flex bg-red justify-center items-center  rounded-t-2xl h-12 w-full font-bold text-snow  text-3xl ">
 				<p>Win Percentage</p>
 			</div>
-			<div className="flex flex-col bg-gray items-center h-full w-full pt-10 rounded-b-2xl  text-2xl">
+			<div className="flex flex-col bg-gray items-center h-full w-full pt-10 rounded-b-xl  ">
 				{players && players.slice(0,5).map((player) => (
-					<p key={player.name + Math.random()} className="pb-20  ">{player.name + " - " + (((player.wins)/(player.loses + player.wins)) * 100).toPrecision(3) + "%"}</p>
+					<p key={player.name + Math.random()} className=" h-full font-bold text-xl ">{player.name + " - " + (((player.wins)/(player.loses + player.wins)) * 100).toPrecision(3) + "%"}</p>
 				))}
 				
 			</div>

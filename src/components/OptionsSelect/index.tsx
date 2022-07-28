@@ -1,19 +1,24 @@
 import React from "react";
+import useFetch from "../../Hooks/useFetch";
 import { Player } from "../../interfaces/Player";
 import DropDownSelect from "../DropdownSelect";
-
+const url = process.env.REACT_APP_PLAYERS_URL;
 interface IProps {
-    selectedPlayers: string[];
-    setSelectedPlayers: React.Dispatch<React.SetStateAction<string>>[];
-    selectedTeams: string[];
-    setSelectedTeams: React.Dispatch<React.SetStateAction<string>>[];
-
+	selectedPlayers: string[];
+	setSelectedPlayers: React.Dispatch<React.SetStateAction<string>>[];
+	selectedTeams: string[];
+	setSelectedTeams: React.Dispatch<React.SetStateAction<string>>[];
 }
 
 const OptionsSelect = (props: IProps) => {
-    const {selectedPlayers, setSelectedPlayers, selectedTeams, setSelectedTeams} = props;
+	const {
+		selectedPlayers,
+		setSelectedPlayers,
+		selectedTeams,
+		setSelectedTeams,
+	} = props;
 
-    const [players, setPlayers] = React.useState<Player[]>();
+	const [players] = useFetch<Player>(url);
 	const teams = [
 		{ name: "Manchester United" },
 		{ name: "Chelsea" },
@@ -22,19 +27,7 @@ const OptionsSelect = (props: IProps) => {
 		{ name: "Liverpool" },
 	];
 
-    React.useEffect(() => {
-		(async () => {
-			try {
-				await fetch("https://localhost:7256/Players")
-					.then((response) => response.json())
-					.then((data) => setPlayers(data));
-			} catch (err) {
-				console.log(err);
-			}
-		})();
-	}, []);
-
-	return (
+	return players ? (
 		<div className="flex flex-row  h-1/12 w-full justify-evenly ">
 			<div className="flex flex-row h-full w-full justify-evenly ">
 				<DropDownSelect
@@ -48,6 +41,7 @@ const OptionsSelect = (props: IProps) => {
 					options={teams}
 				/>
 			</div>
+
 			<div className="flex flex-row h-full w-full justify-evenly ">
 				<DropDownSelect
 					selectOption={selectedPlayers[1]}
@@ -62,7 +56,7 @@ const OptionsSelect = (props: IProps) => {
 				/>
 			</div>
 		</div>
-	);
+	) : null;
 };
 
 export default OptionsSelect;

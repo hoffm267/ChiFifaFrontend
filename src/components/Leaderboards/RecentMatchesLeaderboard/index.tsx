@@ -23,10 +23,10 @@ const RecentMatchesLeaderboard = () => {
 
 	return (
 		<div className="flex flex-col h-full  w-full mx-5  border-jet sm:mb-4 lg:mb-0 ">
-			<div className="flex bg-red justify-center items-center rounded-t-2xl h-12 w-full font-black text-snow font-mono text-4xl ">
+			<div className="flex bg-red justify-center items-center rounded-t-2xl h-12 w-full font-bold text-snow text-3xl ">
 				<p>Recent Matches</p>
 			</div>
-			<div className="flex flex-col items-center h-full w-full pt-10 bg-gray rounded-b-2xl text-2xl ">
+			<div className="flex flex-col items-center h-full w-full pt-10 bg-gray rounded-b-2xl">
 				{games && 
 					games 
 						.slice()
@@ -34,7 +34,7 @@ const RecentMatchesLeaderboard = () => {
 						.slice(0, 5)
 						.map((game: Game) => (
 							
-							<p key={game.player1 + Math.random()} className="pb-20  ">
+							<p key={game.player1 + Math.random()} className="px-10 h-full font-bold text-xl">
 								{game.player1 +
 									" (" +
 									game.team1 +
