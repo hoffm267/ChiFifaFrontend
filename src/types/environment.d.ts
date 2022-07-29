@@ -7,6 +7,7 @@ declare global {
       REACT_APP_PLAYERS_URL: string;
       REACT_APP_PLAYERS_STREAK_URL: string;
       REACT_APP_PLAYERS_PERCENT_URL: string;
+      REACT_APP_PLAYERS_WIN_RATE_URL: string;
     }
   }
 }

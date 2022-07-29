@@ -1,5 +1,7 @@
 import React from "react";
 import DropDownSelect from "../../components/DropdownSelect";
+import RecordsWinRate from "../../components/RecordsWinRate";
+import RecordsWinRateVS from "../../components/RecordsWinRateVS";
 import useFetch from "../../Hooks/useFetch";
 import { Player } from "../../interfaces/Player";
 const url = process.env.REACT_APP_PLAYERS_URL;
@@ -29,16 +31,11 @@ const RecordPage = () => {
 				)}
 				<div className="flex flex-col h-full pt-12 space-y-2 w-full">
 					<div className="flex flex-row  h-full w-full space-x-2  items-center">
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Win Rate
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
+						
+							<RecordsWinRate
+							selectedPlayer={selectedPlayer} />
+
+						
 						<div className="h-full w-full  ">
 							<div className="flex flex-col items-center justify-center h-full w-full   ">
 								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
@@ -62,16 +59,8 @@ const RecordPage = () => {
 						</div>
 					</div>
 					<div className="flex flex-row  h-full w-full space-x-2  items-center">
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Win Rate
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
+					<RecordsWinRateVS selectedPlayer={selectedPlayer} />	
+						
 						<div className="h-full w-full  ">
 							<div className="flex flex-col items-center justify-center h-full w-full   ">
 								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
