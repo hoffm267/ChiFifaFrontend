@@ -6,9 +6,9 @@ import RecentMatchesLeaderboard from "../../components/Leaderboards/RecentMatche
 
 const Home = () => {
 	return (
-		<div className="pt-20 pb-5 md:px-5 sm:pr-9 h-screen select-none">
+		<div className="pt-20 pb-5 px-5 lg:h-screen h-full select-none">
 			
-			<div className="flex sm:flex-col lg:flex-row justify-center h-full w-full py-10 px-5 bg-jet rounded-2xl ">
+			<div className="flex flex-col lg:flex-row justify-center items-center h-full w-full lg:py-10 py-5 px-5 bg-jet rounded-2xl ">
 				
 				<WinsLeaderboard />
 				<PercentageLeaderboard />

@@ -28,11 +28,11 @@ const RecordsStreak= (props: IProps) => {
 		<div className="h-full w-full  ">
 			<div className="flex flex-col items-center justify-center h-full w-full   ">
 				<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-					<p className="font-mono text-6xl text-jet">Streak</p>
+					<p className="font-mono lg:text-6xl text-l text-jet">Streak</p>
                     
 				</div>
 				<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray justify-center items-center">
-                    <p className="text-8xl">{`${winStreak}`}</p>
+                    <p className="text-8xl ">{`${winStreak}`}</p>
                 </div>
 			</div>
 		</div>

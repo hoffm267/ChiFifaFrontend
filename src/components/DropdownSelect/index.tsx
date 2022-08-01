@@ -15,7 +15,7 @@ const DropDownSelect = (props: IProps) => {
 		<div className="relative ">
 			<button
 				onClick={() => setShowOptions(!showOptions)}
-				className="inline-flex peer bg-snow items-center justify-center lg:w-48 sm:h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet     "
+				className="inline-flex peer bg-snow items-center justify-center lg:w-48  h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet     "
 				id="menu-button"
 			>
 				{selectOption}

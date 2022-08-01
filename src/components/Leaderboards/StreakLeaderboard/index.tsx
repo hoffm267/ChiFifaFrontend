@@ -14,11 +14,11 @@ const StreakLeaderboard = () => {
 	};
 
 	return (
-		<div className="flex flex-col h-full w-full mx-5 sm:mb-4 lg:mb-0 ">
+		<div className="flex flex-col h-full w-full mx-5  mb-4 lg:mb-0 ">
 			<div className="flex bg-dollarBill justify-center items-center rounded-t-2xl h-12 w-full font-bold text-snow text-3xl ">
 				<p>Win/Loss Streak</p>
 			</div>
-			<div className="flex flex-col items-center w-full pt-10 h-full bg-gray rounded-b-2xl ">
+			<div className="flex flex-col items-center w-full lg:pt-10  space-y-2  py-2 h-full bg-gray rounded-b-2xl ">
 				{players &&
 					players.slice(0, 5).map((player) => (
 						

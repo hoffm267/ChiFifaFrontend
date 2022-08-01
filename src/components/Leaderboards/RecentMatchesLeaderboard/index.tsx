@@ -22,11 +22,11 @@ const RecentMatchesLeaderboard = () => {
 
 
 	return (
-		<div className="flex flex-col h-full  w-full mx-5  border-jet sm:mb-4 lg:mb-0 ">
+		<div className="flex flex-col h-full  w-full mx-5  border-jet  mb-4 lg:mb-0 ">
 			<div className="flex bg-red justify-center items-center rounded-t-2xl h-12 w-full font-bold text-snow text-3xl ">
 				<p>Recent Matches</p>
 			</div>
-			<div className="flex flex-col items-center h-full w-full pt-10 bg-gray rounded-b-2xl">
+			<div className="flex flex-col items-center h-full w-full lg:pt-10  space-y-2  py-2 bg-gray rounded-b-2xl">
 				{games && 
 					games 
 						.slice()

@@ -22,21 +22,21 @@ const RecordsGoalsAvgVS= (props: IProps) => {
 		<div className="h-full w-full  ">
 			<div className="flex flex-col items-center justify-center h-full w-full   ">
 				<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-					<p className="font-mono text-6xl text-jet">Goals Per Game</p>
+					<p className="font-mono lg:text-6xl text-sm text-jet">Goals Per Game</p>
                     
 				</div>
 				
 <div className="flex flex-col w-full h-full justify-center items-center p-5 bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray">
 					<div className="flex flex-col text-xs h-full w-full justify-center items-center space-y-2">
-						<p className="text-6xl font-bold">HIGHEST</p>
-						<p className="text-2xl">
+						<p className="lg:text-6xl text-l font-bold">HIGHEST</p>
+						<p className="lg:text-2xl text-md">
 							{avgGoals && avgGoals.length!== 0 && `${avgGoals[0].playerName} - ${avgGoals[0].goalsPer}
 									`}
 						</p>
 					</div>
 					<div className="flex flex-col text-xs h-full w-full justify-center items-center space-y-2">
-						<p className="text-6xl font-bold">LOWEST</p>
-						<p className="text-2xl">
+						<p className="lg:text-6xl text-l font-bold">LOWEST</p>
+						<p className="lg:text-2xl text-md">
 							{avgGoals && avgGoals.length!== 0 && `${avgGoals[avgGoals.length-1].playerName} - ${avgGoals[avgGoals.length-1].goalsPer}
 									`}
 	

@@ -22,7 +22,7 @@ const RecordPage = () => {
 	};
 
 	return (
-		<div className="pt-20 pb-5 px-5 flex flex-row justify-center  h-screen bg-red select-none ">
+		<div className="pt-20 pb-5 px-5 flex flex-row justify-center h-screen  bg-red select-none ">
 			<div className="flex flex-col py-5 px-10 h-full w-full rounded-2xl space-y-2  bg-jet  ">
 				{players && (
 					<div className="flex fixed mt-0 items-center w-full rounded-lg">

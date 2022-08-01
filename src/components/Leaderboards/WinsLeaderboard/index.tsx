@@ -21,11 +21,11 @@ const WinsLeaderboard = () => {
 
 	
 	return (
-		<div className="flex flex-col h-full  w-full mx-5 sm:mb-4 lg:mb-0   ">
+		<div className="flex flex-col h-full  w-full mx-5  mb-4 lg:mb-0   ">
 			<div className="flex bg-dollarBill justify-center items-center rounded-t-xl h-12 w-full font-bold text-snow text-3xl ">
 				<p>Total Wins</p>
 			</div>
-			<div /*onClick={handleExpand} */ className="flex flex-col items-center bg-gray h-full w-full pt-10 rounded-b-xl ">
+			<div /*onClick={handleExpand} */ className="flex flex-col items-center bg-gray h-full w-full lg:pt-10  space-y-2  py-2 rounded-b-xl ">
 				{players && !showAll && players.slice(0,5).map((player) => (
 					<p key={player.name + Math.random()} className="h-full font-bold text-xl ">{player.name + " - " + player.wins + " Wins"}</p>
 				))}
