@@ -2,8 +2,12 @@ import React from "react";
 import DropDownSelect from "../../components/DropdownSelect";
 import RecordsWinRate from "../../components/RecordsWinRate";
 import RecordsWinRateVS from "../../components/RecordsWinRateVS";
+import RecordsGoalsAvg from "../../components/RecordsGoalsAvg";
 import useFetch from "../../Hooks/useFetch";
 import { Player } from "../../interfaces/Player";
+import RecordsGoalsAvgVS from "../../components/RecordsGoalsAvgVS";
+import RecordsRecentMatches from "../../components/RecordsRecentMatches";
+import RecordsStreak from "../../components/RecordsStreak";
 const url = process.env.REACT_APP_PLAYERS_URL;
 
 const RecordPage = () => {
@@ -31,57 +35,16 @@ const RecordPage = () => {
 				)}
 				<div className="flex flex-col h-full pt-12 space-y-2 w-full">
 					<div className="flex flex-row  h-full w-full space-x-2  items-center">
-						
-							<RecordsWinRate
-							selectedPlayer={selectedPlayer} />
+						<RecordsWinRate selectedPlayer={selectedPlayer} />
 
-						
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Goals Per Game
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
-
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Last Five Games
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
+						<RecordsGoalsAvg selectedPlayer={selectedPlayer} />
+						<RecordsRecentMatches selectedPlayer={selectedPlayer} />
 					</div>
 					<div className="flex flex-row  h-full w-full space-x-2  items-center">
-					<RecordsWinRateVS selectedPlayer={selectedPlayer} />	
-						
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Goals Per Game
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
+						<RecordsWinRateVS selectedPlayer={selectedPlayer} />
 
-						<div className="h-full w-full  ">
-							<div className="flex flex-col items-center justify-center h-full w-full   ">
-								<div className="flex flex-col items-center justify-center h-1/6 w-full rounded-t-2xl bg-snow border-2 border-gray ">
-									<p className="font-mono text-6xl text-jet">
-										Last Five Games
-									</p>
-								</div>
-								<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray "></div>
-							</div>
-						</div>
+						<RecordsGoalsAvgVS selectedPlayer={selectedPlayer} />
+						<RecordsStreak selectedPlayer={selectedPlayer} />
 					</div>
 				</div>
 			</div>

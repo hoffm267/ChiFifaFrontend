@@ -1,5 +1,5 @@
 export interface WinRates {
-    PlayerName: string,
-    GamesPlayed: number,
-    GamesWon: number
+    playerName: string,
+    gamesPlayed: number,
+    gamesWon: number
 }
