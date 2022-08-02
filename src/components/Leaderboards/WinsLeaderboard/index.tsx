@@ -1,4 +1,3 @@
-import { HubConnection } from "@microsoft/signalr";
 import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
@@ -11,13 +10,9 @@ const WinsLeaderboard = () => {
 
 	// const players = [{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()},{name: "test", wins: Math.random()}]
 	
-	const [showAll, setShowAll] = React.useState<boolean>(false);
 
 	
 
-	const handleExpand = () => {
-		setShowAll(!showAll);
-	}
 
 	
 	return (
@@ -26,12 +21,10 @@ const WinsLeaderboard = () => {
 				<p>Total Wins</p>
 			</div>
 			<div /*onClick={handleExpand} */ className="flex flex-col items-center bg-gray h-full w-full lg:pt-10  space-y-2  py-2 rounded-b-xl ">
-				{players && !showAll && players.slice(0,5).map((player) => (
+				{players  && players.slice(0,5).map((player) => (
 					<p key={player.name + Math.random()} className="h-full font-bold text-xl ">{player.name + " - " + player.wins + " Wins"}</p>
 				))}
-				{players && showAll && players.slice(0,10).map((player) => (
-					<p key={player.name + Math.random()} className="pb-20  ">{player.name + " - " + player.wins + " Wins"}</p>
-				))}
+				
 				{!players && <p className="pb-20  ">Loading...</p>}
 				
 			</div>

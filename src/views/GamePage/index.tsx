@@ -44,7 +44,6 @@ const GamePage = () => {
 		}
 	};
 
-	const convertToJson = async (res: Response) => await res.json()
 	
 
 	return (

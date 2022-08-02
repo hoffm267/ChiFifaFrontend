@@ -9,16 +9,6 @@ const RecentMatchesLeaderboard = () => {
 	const [games] = useFetch<Game>(url);
 	
 
-	const [showAll, setShowAll] = React.useState<boolean>(false);
-
-
-	
-
-	const handleExpand = () => {
-		setShowAll(!showAll);
-	};
-
-	
 
 
 	return (

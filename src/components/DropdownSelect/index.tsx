@@ -42,7 +42,7 @@ const DropDownSelect = (props: IProps) => {
 				<div className="divide-y divide-gray bg-snow  ">
 					{options &&
 						options.map((o) => (
-							<a
+							<div 
 								onClick={() => {
 									setSelectOption(o.name);
 									setShowOptions(false);
@@ -50,7 +50,7 @@ const DropDownSelect = (props: IProps) => {
 								className="text-gray-700 border-solid block px-4 py-2 text-sm cursor-pointer "
 							>
 								{o.name}
-							</a>
+							</div>
 						))}
 				</div>
 			</div>

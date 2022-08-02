@@ -1,8 +1,6 @@
 import React from "react";
 import useFetch from "../../Hooks/useFetch";
-import { AvgGoals } from "../../interfaces/AvgGoals";
 import { Game } from "../../interfaces/Game";
-import { Player } from "../../interfaces/Player";
 
 const url = process.env.REACT_APP_PLAYERS_HISTORY
 

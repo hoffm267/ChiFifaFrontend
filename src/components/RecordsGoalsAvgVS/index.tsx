@@ -1,7 +1,6 @@
 import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { AvgGoals } from "../../interfaces/AvgGoals";
-import { Player } from "../../interfaces/Player";
 
 const url = process.env.REACT_APP_PLAYERS_GOALS_VS_URL
 

@@ -7,12 +7,6 @@ const url = process.env.REACT_APP_PLAYERS_STREAK_URL;
 const StreakLeaderboard = () => {
 	const [players] = useFetch<Player>(url);
 
-	const [showAll, setShowAll] = React.useState<boolean>(false);
-
-	const handleExpand = () => {
-		setShowAll(!showAll);
-	};
-
 	return (
 		<div className="flex flex-col h-full w-full mx-5  mb-4 lg:mb-0 ">
 			<div className="flex bg-dollarBill justify-center items-center rounded-t-2xl h-12 w-full font-bold text-snow text-3xl ">

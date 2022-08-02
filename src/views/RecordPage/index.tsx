@@ -12,14 +12,11 @@ const url = process.env.REACT_APP_PLAYERS_URL;
 
 const RecordPage = () => {
 	const [players] = useFetch<Player>(url);
-	const [showAll, setShowAll] = React.useState<boolean>(false);
 
 	const [selectedPlayer, setSelectedPlayer] =
 		React.useState<string>("Select Player");
 
-	const handleExpand = () => {
-		setShowAll(!showAll);
-	};
+	
 
 	return (
 		<div className="pt-20 pb-5 px-5 flex flex-row justify-center h-screen  bg-red select-none ">
