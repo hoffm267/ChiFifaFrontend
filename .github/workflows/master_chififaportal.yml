@@ -58,6 +58,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'ChiFifaPortal'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E7445D3812024C3497C0286F090A6654 }}
           package: .
