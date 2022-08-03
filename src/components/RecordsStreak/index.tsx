@@ -2,8 +2,9 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { Player } from "../../interfaces/Player";
 
-const url = process.env.REACT_APP_PLAYERS_STREAK_URL;
+// const url = process.env.REACT_APP_PLAYERS_STREAK_URL;
 
+const url = "https://chififa.azurewebsites.net/Players/streak"
 interface IProps {
     selectedPlayer: string
 }

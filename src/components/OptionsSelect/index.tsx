@@ -2,7 +2,8 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { Player } from "../../interfaces/Player";
 import DropDownSelect from "../DropdownSelect";
-const url = process.env.REACT_APP_PLAYERS_URL;
+// const url = process.env.REACT_APP_PLAYERS_URL;
+const url = "https://chififa.azurewebsites.net/Players"
 interface IProps {
 	selectedPlayers: string[];
 	setSelectedPlayers: React.Dispatch<React.SetStateAction<string>>[];

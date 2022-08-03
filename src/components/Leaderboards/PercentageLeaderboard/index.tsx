@@ -2,7 +2,8 @@ import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Player } from "../../../interfaces/Player";
 
-const url = process.env.REACT_APP_PLAYERS_PERCENT_URL;
+//const url = process.env.REACT_APP_PLAYERS_PERCENT_URL;
+const url = "https://chififa.azurewebsites.net/Players/percent"
 
 const PercentageLeaderboard = () => {
 	

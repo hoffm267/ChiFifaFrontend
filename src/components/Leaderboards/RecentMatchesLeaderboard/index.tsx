@@ -2,7 +2,8 @@ import React from "react";
 import useFetch from "../../../Hooks/useFetch";
 import { Game } from "../../../interfaces/Game";
 
-const url = process.env.REACT_APP_GAME_URL;
+// const url = process.env.REACT_APP_GAME_URL;
+const url = "https://chififa.azurewebsites.net/Game"
 
 const RecentMatchesLeaderboard = () => {
 

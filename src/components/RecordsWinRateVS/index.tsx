@@ -1,7 +1,8 @@
 import useFetch from "../../Hooks/useFetch";
 import { WinRates } from "../../interfaces/WinRates";
 
-const url = process.env.REACT_APP_PLAYERS_WIN_RATE_URL;
+// const url = process.env.REACT_APP_PLAYERS_WIN_RATE_URL;
+const url = "https://chififa.azurewebsites.net/players/winrate"
 
 // const url = process.env.REACT_APP_PLAYERS_PERCENT_URL;
 

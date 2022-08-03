@@ -8,7 +8,8 @@ import { Player } from "../../interfaces/Player";
 import RecordsGoalsAvgVS from "../../components/RecordsGoalsAvgVS";
 import RecordsRecentMatches from "../../components/RecordsRecentMatches";
 import RecordsStreak from "../../components/RecordsStreak";
-const url = process.env.REACT_APP_PLAYERS_URL;
+// const url = process.env.REACT_APP_PLAYERS_URL;
+const url = "https://chififa.azurewebsites.net/Players"
 
 const RecordPage = () => {
 	const [players] = useFetch<Player>(url);

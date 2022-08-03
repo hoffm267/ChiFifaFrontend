@@ -2,8 +2,9 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { Game } from "../../interfaces/Game";
 
-const url = process.env.REACT_APP_PLAYERS_HISTORY
+// const url = process.env.REACT_APP_PLAYERS_HISTORY
 
+const url = "https://chififa.azurewebsites.net/Players/goals"
 interface IProps {
     selectedPlayer: string
 }

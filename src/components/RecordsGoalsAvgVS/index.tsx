@@ -2,7 +2,10 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { AvgGoals } from "../../interfaces/AvgGoals";
 
-const url = process.env.REACT_APP_PLAYERS_GOALS_VS_URL
+// const url = process.env.REACT_APP_PLAYERS_GOALS_VS_URL
+
+const url = "https://chififa.azurewebsites.net/Players/history"
+
 
 interface IProps {
     selectedPlayer: string

@@ -4,7 +4,9 @@ import SubmitButton from "../../components/SubmitButton";
 import OptionsSelect from "../../components/OptionsSelect";
 import { Game } from "../../interfaces/Game";
 
-const url = process.env.REACT_APP_GAME_URL;
+// const url = process.env.REACT_APP_GAME_URL;
+
+const url = "https://chififa.azurewebsites.net/Game"
 
 const GamePage = () => {
 	const [player1, setPlayer1] = React.useState<string>("Pick Player 1");
