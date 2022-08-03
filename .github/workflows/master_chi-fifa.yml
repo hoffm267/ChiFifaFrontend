@@ -56,4 +56,4 @@ jobs:
         with:
           app-name: 'chi-fifa'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AB2341AC0D84446EA6EFF44FB429076D }}
-          package: release.zip
+          package: .
