@@ -8,7 +8,7 @@ function useFetch<T>(url: string) {
 
 	useEffect(() => {
 		const newConnection = new HubConnectionBuilder()
-			.withUrl("https://chififaportal.azurewebsites.net/hubs/game")
+			.withUrl("https://chififa.azurewebsites.net/hubs/game")
 
 			.withAutomaticReconnect()
 			.build();
