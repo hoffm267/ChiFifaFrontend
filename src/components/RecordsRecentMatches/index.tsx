@@ -4,7 +4,7 @@ import { Game } from "../../interfaces/Game";
 
 // const url = process.env.REACT_APP_PLAYERS_HISTORY
 
-const url = "https://chififa.azurewebsites.net/Players/goals"
+const url = "https://chififa.azurewebsites.net/Players/history"
 interface IProps {
     selectedPlayer: string
 }

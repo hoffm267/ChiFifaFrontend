@@ -4,7 +4,7 @@ import { AvgGoals } from "../../interfaces/AvgGoals";
 
 // const url = process.env.REACT_APP_PLAYERS_GOALS_VS_URL
 
-const url = "https://chififa.azurewebsites.net/Players/history"
+const url = "https://chififa.azurewebsites.net/Players/goalsvs"
 
 
 interface IProps {
