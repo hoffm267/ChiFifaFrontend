@@ -17,10 +17,10 @@ const RecordPage = () => {
 		React.useState<string>("Select Player");
 
 	return (
-		<div className="pt-20 pb-5 px-5 flex flex-row justify-center h-screen  bg-red select-none ">
-			<div className="flex flex-col py-5 px-10 h-full w-full rounded-2xl space-y-2  bg-jet  ">
+		<div className="pt-20 pb-5 px-5 h-full lg:h-screen  bg-red select-none ">
+			<div className="flex flex-col py-5 px-10 h-full w-full rounded-2xl space-y-2 bg-jet  ">
 				{players && (
-					<div className="flex fixed mt-0 items-center w-full rounded-lg">
+					<div className="ml-1 lg:ml-0">
 						<DropDownSelect
 							selectOption={selectedPlayer}
 							setSelectOption={setSelectedPlayer}
@@ -28,20 +28,26 @@ const RecordPage = () => {
 						/>
 					</div>
 				)}
-				<div className="flex flex-col h-full pt-12 space-y-2 w-full">
-					<div className="flex flex-row  h-full w-full space-x-2  items-center">
+				
+				<div className="flex flex-col h-full  space-y-2 w-full items-center justify-center ">
+					
+					<div className="flex flex-col lg:flex-row h-full w-full space-x-2 space-y-2 justify-center items-center">
+						<div className="w-full h-full ml-2 lg:ml-0">
 						<RecordsWinRate selectedPlayer={selectedPlayer} />
-
+						</div>
 						<RecordsGoalsAvg selectedPlayer={selectedPlayer} />
 						<RecordsRecentMatches selectedPlayer={selectedPlayer} />
 					</div>
-					<div className="flex flex-row  h-full w-full space-x-2  items-center">
+				
+					<div className="flex flex-col lg:flex-row h-full w-full space-x-2 space-y-2 items-center ">
+						<div className="w-full h-full ml-2 lg:ml-0">
 						<RecordsWinRateVS selectedPlayer={selectedPlayer} />
-
+						</div>
 						<RecordsGoalsAvgVS selectedPlayer={selectedPlayer} />
 						<RecordsStreak selectedPlayer={selectedPlayer} />
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	);

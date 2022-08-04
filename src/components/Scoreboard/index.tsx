@@ -18,7 +18,7 @@ const Scoreboard = (props: IProps) => {
 	};
 
 	return (
-		<div className="flex flex-col justify-evenly items-center h-5/6 w-full mb-2 bg-jet mx-5 rounded-2xl shadow-xl ">
+		<div className="flex flex-col justify-evenly items-center h-full w-full mb-2 bg-jet mx-5 rounded-2xl  ">
 			<div
 				id="upDiv"
 				onClick={handleClick}
@@ -26,11 +26,11 @@ const Scoreboard = (props: IProps) => {
 			>
 				<div
 					id="upButton"
-					className="border-solid border-b-snow border-b-[32px] border-x-transparent border-x-[32px] border-t-0 "
+					className="border-solid border-b-snow border-b-[24px] lg:border-b-[32px] border-x-transparent border-x-[24px] lg:border-x-[32px] border-t-0 "
 				></div>
 			</div>
 			<div className="flex justify-center items-center h-full w-full">
-				<div className="flex flex-row text-9xl text-snow font-mono select-none">
+				<div className="flex flex-row text-6xl lg:text-9xl text-snow font-mono select-none">
 					<p>
 						{score < 10 ? 0 : null}
 						{score}
@@ -44,7 +44,7 @@ const Scoreboard = (props: IProps) => {
 			>
 				<div
 					id="downButton"
-					className="border-solid border-t-snow border-t-[32px] border-x-transparent border-x-[32px] border-b-0"
+					className="border-solid border-t-snow border-t-[24px] lg:border-t-[32px] border-x-transparent border-x-[24px] lg:border-x-[32px] border-b-0"
 				></div>{" "}
 			</div>
 		</div>
