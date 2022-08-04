@@ -49,16 +49,16 @@ const GamePage = () => {
 	
 
 	return (
-		<div className="pt-20 pb-5 px-5  h-screen bg-dollarBill  ">
+		<div className="pt-20 pb-5 px-5 flex-row justify-center h-screen bg-dollarBill overflow-clip   ">
 			<div className="flex flex-col  py-10 px-10 h-full w-full rounded-2xl bg-jet  ">
-				<div className="flex flex-col items-center py-10 px-10 h-full w-full rounded-2xl bg-snow rounded-l-2xl border-4 border-gray border-opacity-80 ">
+				<div className="flex flex-col items-center py-10 px-10 h-full w-full space-y-1 lg:space-y-4 rounded-2xl bg-snow rounded-l-2xl border-4 border-gray border-opacity-80 ">
 					<OptionsSelect
 						selectedPlayers={[player1, player2]}
 						setSelectedPlayers={[setPlayer1, setPlayer2]}
 						selectedTeams={[team1, team2]}
 						setSelectedTeams={[setTeam1, setTeam2]}
 					/>
-					<div className="flex flex-row h-full w-full items-center ">
+					<div className="flex flex-row h-full w-full items-center justify-center">
 						<Scoreboard score={score1} setScore={setScore1} />
 						<Scoreboard score={score2} setScore={setScore2} />
 					</div>

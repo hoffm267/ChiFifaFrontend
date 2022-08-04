@@ -29,8 +29,8 @@ const OptionsSelect = (props: IProps) => {
 	];
 
 	return players ? (
-		<div className="flex flex-row  h-1/12 w-full justify-evenly ">
-			<div className="flex flex-row h-full w-full justify-evenly ">
+		<div className="flex flex-col lg:flex-row  h-full lg:h-1/12 w-full justify-evenly mb-2 ">
+			<div className="flex flex-row h-full w-full justify-evenly items-center">
 				<DropDownSelect
 					selectOption={selectedPlayers[0]}
 					setSelectOption={setSelectedPlayers[0]}

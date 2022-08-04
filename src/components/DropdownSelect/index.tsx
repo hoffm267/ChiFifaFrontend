@@ -12,10 +12,10 @@ const DropDownSelect = (props: IProps) => {
 	const [showOptions, setShowOptions] = React.useState<boolean>(false);
 
 	return (
-		<div className="relative ">
+		<div className="  ">
 			<button
 				onClick={() => setShowOptions(!showOptions)}
-				className="inline-flex peer bg-snow items-center justify-center lg:w-48  h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet     "
+				className="inline-flex peer bg-snow items-center justify-center lg:w-48  h-18 lg:h-12 rounded-md border-2 border-jet border-opacity-80 shadow-sm px-4 py-2 text-sm font-mono font-bold text-jet  "
 				id="menu-button"
 			>
 				{selectOption}
@@ -37,7 +37,7 @@ const DropDownSelect = (props: IProps) => {
 			<div
 				className={`${
 					showOptions ? "visible" : "invisible"
-				}  divide-jet  shadow-lg  ring-1 ring-black ring-opacity-5 rounded-md focus:outline-none overflow-clip `}
+				}  divide-jet  shadow-lg  ring-1 ring-black ring-opacity-5 rounded-md focus:outline-none overflow-clip fixed`}
 			>
 				<div className="divide-y divide-gray bg-snow  ">
 					{options &&
