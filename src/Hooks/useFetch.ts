@@ -7,6 +7,7 @@ function useFetch<T>(url: string) {
 	const [connection, setConnection] = useState<HubConnection>();
 
 	useEffect(() => {
+		
 		const newConnection = new HubConnectionBuilder()
 			.withUrl("https://chififa.azurewebsites.net/hubs/game")
 
@@ -14,11 +15,16 @@ function useFetch<T>(url: string) {
 			.build();
 
 		setConnection(newConnection);
+		
 
+		
+	}, []);
+
+	useEffect(() => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => setData(data));
-	}, [url]);
+	}, [url])
 
 	useEffect(() => {
 		if (connection) {
@@ -35,7 +41,7 @@ function useFetch<T>(url: string) {
 				})
 				.catch((e) => console.log("Connection failed: ", e));
 		}
-	}, [connection, url]);
+	}, [connection]);
 
 	return [data];
 }
