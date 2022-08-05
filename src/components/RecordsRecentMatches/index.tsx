@@ -27,7 +27,7 @@ const RecordsRecentMatches= (props: IProps) => {
 				</div>
 				
 					<div className="flex w-full h-full bg-blackCoral rounded-b-2xl border-b-4 border-r-4 border-l-4 border-gray justify-center items-center">
-                    <p className="lg:space-y-2">{players && players.length!== 0 && players.slice()
+                    <div className="space-y-2 py-2">{players && players.length!== 0 && players.slice()
 						
 						.slice(0, 5)
 						.map((game: Game) => (
@@ -49,7 +49,7 @@ const RecordsRecentMatches= (props: IProps) => {
 							</p>
 						))
                         
-                    }</p>
+                    }</div>
 				</div>
 			</div>
 		</div>
